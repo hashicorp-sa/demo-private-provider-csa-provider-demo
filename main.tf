@@ -8,18 +8,18 @@ terraform {
 }
 
 locals {
-  csa_members = [ "Bird", "Mammal", "Invertebrate", "Reptile", "Fish", "Amphibian" ]
+  animals = [ "Bird", "Mammal", "Invertebrate", "Reptile", "Fish", "Amphibian" ]
 }
 
 resource "demo_animal" "demo" {
-    for_each = { for csa_member in local.csa_members : csa_member => csa_member }
-    customer_success_architect = each.key
+    for_each = { for animal in local.animals : animal => animal }
+    class = each.key
 }
 
 output "demo_animals" {
-  value = { for csa_member in local.csa_members : csa_member =>  csa_specialism.demo[csa_member].specialism }
+  value = { for animal in local.animals : animal =>  demo_animal.demo[animal].animal }
 }
 
 output "demo_dates" {
-  value = { for csa_member in local.csa_members : csa_member =>  csa_specialism.demo[csa_member].date_configured }
+  value = { for animal in local.animals : animal =>  demo_animal.demo[animal].date_configured }
 }
