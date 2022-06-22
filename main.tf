@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    csa {
+    csa = {
         source = "tfe.hashicorpdemo.net/provider-demo/csa"
     }
   }
