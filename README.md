@@ -9,9 +9,10 @@ To use this demo code, follow these steps:
 1. Create a Terraform Cloud or Enterprise organization.
 2. Deploy your custom provider to the organization private registry from the [https://github.com/HashiCorp-CSA/demo-private-provider-csa-provider](demo provider repository).
 3. Clone this repository.
-3. Run `terraform login mytfe.com`, replacing myfe.com with your Terraform Enterprise instance.
-4. Run `terraform init` to pull down the provider.
-5. Run `terraform apply` to plan and apply the changes.
+4. Replace `source = "tfe.hashicorpdemo.net/provider/demo"` in `main.tf` with the path to your own private registry provider.
+5. Run `terraform login mytfe.com`, replacing myfe.com with your Terraform Enterprise instance.
+6. Run `terraform init` to pull down the provider.
+7. Run `terraform apply` to plan and apply the changes.
 
 ## Contributing
 
