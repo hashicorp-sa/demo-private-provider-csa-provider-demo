@@ -2,8 +2,14 @@ terraform {
   required_providers {
     demo = {
       source = "tfe.hashicorpdemo.net/private-provider-demo/demo"
+      version = "1.0.30"
     }
   }
+}
+
+provider "demo" {
+  token = "sdsadsdafsdafsadf"
+  url = "https://demo.tfe.hashicorp.com"
 }
 
 resource "demo_animal" "demo" {
