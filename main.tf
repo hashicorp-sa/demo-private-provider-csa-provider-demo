@@ -4,7 +4,6 @@ terraform {
       source = "tfe.hashicorpdemo.net/private-provider-demo/demo"
     }
   }
-  experiments = [module_variable_optional_attrs]
 }
 
 resource "demo_animal" "demo" {
