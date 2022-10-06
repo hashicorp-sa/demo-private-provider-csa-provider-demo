@@ -7,8 +7,8 @@ terraform {
 }
 
 provider "demo" {
-  token = "sdsadsdafsdafsadf"
-  url = "https://demo.tfe.hashicorp.com"
+  token = "tHisIsNoTAreAlTokEN"
+  url = "https://pretend.api.url"
 }
 
 resource "demo_animal" "demo" {
