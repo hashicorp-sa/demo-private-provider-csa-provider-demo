@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     demo = {
-      source = "providers.hashicorpdemo.net/private-provider-demo/demo"
+      source = "tfe.hashicorpdemo.net/private-provider-demo/demo"
     }
   }
 }
